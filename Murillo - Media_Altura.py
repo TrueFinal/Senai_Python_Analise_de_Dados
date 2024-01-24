@@ -26,5 +26,7 @@ def media_altura():
             if contador_de_mulheres > 0:
                 media = soma_altura_mulheres / contador_de_mulheres
                 print("A média de altura das mulheres é", media)
-                print("--------------------------------------------------------------------")
+                print("---------------------------------------------------------")
             break
+
+media_altura()

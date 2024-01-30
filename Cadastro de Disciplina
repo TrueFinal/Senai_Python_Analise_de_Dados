@@ -1,0 +1,28 @@
+dis_codigo = list()
+dis_nome = str()
+DISCIPLINAS = []
+
+def duplicados(dis_codigo, valor):
+    for i in range(len(dis_codigo)):
+        if i % 2 == 0:
+            if dis_codigo[i] == valor:
+                return True
+    return False
+
+def cad_disciplina():
+    print('CADASTRO DE DISCIPLINAS')
+    while True:
+        dis_codigo = int(input('Digite o codigo da disciplina:'))
+        if dis_codigo == 0:
+            print('Este não é um código de disciplina válido!')
+            break
+        if duplicados(DISCIPLINAS, dis_codigo) == False:
+            dis_nome = input('Digite o nome da disciplina:')
+            DISCIPLINAS.append(dis_codigo)
+            DISCIPLINAS.append(dis_nome)
+            print('')
+        else:
+            print('O código informado já foi cadastrado!')
+            print('')
+
+cad_disciplina()
